@@ -27,7 +27,7 @@ class RationalNumber
 	end
 
 	def <=>(number)
-		if number.numinator > 0 && @numinator > 0 || number.numinator < 0 && @numinator < 0
+		if (number.numinator > 0 && @numinator > 0) || (number.numinator < 0 && @numinator < 0)
 			@numinator * number.denominator <=> @denominator * number.numinator
 		else
 			number.numinator < 0 ? 1 : -1
